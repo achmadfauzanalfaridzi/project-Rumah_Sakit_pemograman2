@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <script>window["__codeletBootstrap__"] = JSON.parse('{"A":"A","B":"20261002-05-536c453","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script>
+  <script src="/_sdk/6542d56fbfe7a3eb.telemetry_sdk.js"
+    integrity="sha512-ECdM0nK7EkwDuOqho2qxgyRQXyBHk9hZqRKMBr+Xsu6zjeHlt+qkO2N2YRiHN7Kg4e1fEHDhjIp4bGJYVypv1g=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rumah Sakit Podomari</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #123047;
+      --blue: #0d6681;
+      --teal: #087d72;
+      --cream: #f7fbfa;
+      --line: #dce9e7;
+      --coral: #d94748;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "DM Sans", sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+    }
+
+    .display {
+      font-family: Fraunces, serif;
+    }
+
+    .route {
+      display: none;
+      animation: rise .28s ease both;
+    }
+
+    .route.active {
+      display: block;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(8px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .nav-link.active {
+      color: #087d72;
+      background: #e8f6f2;
+    }
+
+    .soft-grid {
+      background-image: linear-gradient(rgba(13, 102, 129, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(13, 102, 129, .05) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .toast {
+      transform: translateY(130%);
+      opacity: 0;
+      transition: .3s;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .search-result {
+      cursor: pointer;
+    }
+
+    .map-pattern {
+      background: linear-gradient(135deg, #dcefeb, #f9f2df);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .map-pattern:after {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background: repeating-linear-gradient(35deg, transparent 0 42px, rgba(13, 102, 129, .16) 43px 46px, transparent 47px 85px);
+    }
+
+    .map-pin {
+      position: relative;
+      z-index: 1;
+    }
+
+    input,
+    select,
+    textarea {
+      border: 1px solid #c9dcda;
+      outline: none;
+      width: 100%;
+      border-radius: .75rem;
+      padding: .72rem .85rem;
+      background: #fff;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #087d72;
+      box-shadow: 0 0 0 3px rgba(8, 125, 114, .14);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .45rem;
+      border-radius: .7rem;
+      padding: .72rem 1rem;
+      font-weight: 700;
+      transition: .2s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #087d72;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #066359
+    }
+
+    .btn-outline {
+      border: 1px solid #a7c9c3;
+      color: #07665d;
+      background: #fff;
+    }
+
+    .btn-outline:hover {
+      background: #edf8f6
+    }
+
+    .btn-danger {
+      background: #d94748;
+      color: white;
+    }
+
+    .btn-danger:hover {
+      background: #bb383a
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 1.1rem;
+      box-shadow: 0 8px 24px rgba(21, 65, 74, .055);
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: .28rem .65rem;
+      font-size: .75rem;
+      font-weight: 700;
+      background: #e8f6f2;
+      color: #07665d;
+    }
+
+    .detail-panel {
+      display: none;
+    }
+
+    .detail-panel.open {
+      display: block;
+    }
+
+    @media(max-width:900px) {
+      .desktop-nav {
+        display: none
+      }
+
+      .mobile-toggle {
+        display: flex
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr !important
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr !important
+      }
+    }
+
+    @media(min-width:901px) {
+      .mobile-toggle {
+        display: none
+      }
+
+      .mobile-nav {
+        display: none !important
+      }
+    }
+
+    @media(max-width:620px) {
+      .footer-grid {
+        grid-template-columns: 1fr !important
+      }
+
+      .hide-mobile {
+        display: none !important
+      }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/6c2ecc939521f244.data_sdk.js" type="text/javascript"
+    integrity="sha512-gRx8s+XsZDN6mSIQu2sivLZysbV0WHhb5kXNUWlgVb5lCMU1foJYukyMEDPv8Tnoocb8iwqB4XdRrWc7oEGzIQ=="></script>
+  <script src="/_sdk/b443124ed7f67435.editing_sdk.js" type="text/javascript"
+    integrity="sha512-oLX1dpTmN2mZumhKQc0okubrUJ8MqA6c5fM5NHln6+9t8KpYrcElyL7NOV7dV6pLkMWSzWZRFAI+WLGRVrl64A=="></script>
+  <script src="/_sdk/ab4336f91e694f96.resizing_sdk.js" type="text/javascript"
+    integrity="sha512-cxmeUrBrNlwwLr+tEu/iwM5F3boeK4qDMoH3QjUPqJptkO5NkaDVhQvyIHIn+3EflI5/uubWzkSA78B1tCswgA=="></script>
+</head>
+
+<body data-template-id="__page-root" style="background: rgb(247, 251, 250);">
+  <header class="sticky top-0 z-40 border-b border-[#dce9e7] bg-white/95 backdrop-blur">
+    <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 lg:px-6"><button type="button"
+        onclick="go('beranda')" class="flex items-center gap-3 text-left" aria-label="Kembali ke Beranda"> <span
+          class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#087d72] text-xl font-bold text-white">+</span>
+        <span><strong class="block text-sm text-[#123047]">Rumah Sakit Podomari</strong><small
+            class="text-xs text-[#5d7078]">Mendampingi setiap langkah sehat</small></span> </button>
+      <nav class="desktop-nav flex items-center gap-1" aria-label="Navigasi utama"><button
+          class="nav-link rounded-lg px-3 py-2 text-sm font-semibold" onclick="go('beranda')">Beranda</button> <button
+          class="nav-link rounded-lg px-3 py-2 text-sm font-semibold" onclick="go('layanan')">Layanan</button> <button
+          class="nav-link rounded-lg px-3 py-2 text-sm font-semibold" onclick="go('jadwal')">Jadwal Dokter</button>
+        <button class="nav-link rounded-lg px-3 py-2 text-sm font-semibold" onclick="go('artikel')">Informasi</button>
+        <button class="nav-link rounded-lg px-3 py-2 text-sm font-semibold" onclick="go('tentang')">Tentang</button>
+      </nav>
+      <div class="flex items-center gap-2"><button onclick="go('igd')" data-template-id="emergency-button"
+          class="canva-button btn btn-danger text-sm"
+          style="background: rgb(217, 71, 72); color: rgb(255, 255, 255); font-weight: 700;"><i data-lucide="phone-call"
+            class="h-4 w-4"></i><span class="hide-mobile">IGD </span>24 Jam</button> <button type="button"
+          class="mobile-toggle rounded-lg border border-[#c9dcda] p-2 text-[#087d72]" onclick="toggleMobile()"
+          aria-label="Buka menu"><i data-lucide="menu"></i></button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav hidden border-t border-[#dce9e7] bg-white px-4 py-3"
+      aria-label="Menu mobile">
+
+      <div class="grid grid-cols-2 gap-2 text-sm font-semibold"><button class="btn-outline btn"
+          onclick="go('beranda');toggleMobile()">Beranda</button><button class="btn-outline btn"
+          onclick="go('layanan');toggleMobile()">Layanan</button> <button class="btn-outline btn"
+          onclick="go('jadwal');toggleMobile()">Jadwal Dokter</button><button class="btn-outline btn"
+          onclick="go('booking');toggleMobile()">Pendaftaran</button> <button class="btn-outline btn"
+          onclick="go('artikel');toggleMobile()">Artikel</button><button class="btn-outline btn"
+          onclick="go('tentang');toggleMobile()">Tentang Kami</button>
+      </div>
+    </nav>
+  </header>
+  <main class="w-full">
+    <section class="border-b border-[#dce9e7] bg-white">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 md:flex-row md:items-center md:justify-between lg:px-6">
+        <div id="breadcrumb" class="text-sm text-[#5d7078]" aria-live="polite">
+
+          Beranda
+        </div>
+        <div class="relative w-full md:w-80"><label class="sr-only" for="site-search">Cari informasi</label> <i
+            data-lucide="search" class="pointer-events-none absolute left-3 top-3 h-4 w-4 text-[#5d7078]"></i> <input
+            id="site-search" type="search" placeholder="Cari layanan, poli, informasi..." class="pl-9 text-sm"
+            oninput="searchSite(this.value)">
+          <div id="search-results"
+            class="absolute z-30 mt-1 hidden w-full overflow-hidden rounded-xl border border-[#dce9e7] bg-white shadow-xl">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="beranda" class="route">
+      <div class="soft-grid">
+        <div class="hero-grid mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 py-12 lg:px-6 lg:py-16">
+          <div class="flex flex-col justify-center"><span data-template-id="hero-kicker" class="canva-tag tag w-fit"
+              style="background: rgb(232, 246, 242); color: rgb(8, 125, 114); font-weight: 700; font-style: normal; font-size: 16px;">Untuk
+              Pasien &amp; Keluarga</span>
+            <h1 data-template-id="hero-title"
+              class="canva-text display mt-4 text-4xl font-bold leading-tight text-[#123047] md:text-6xl"
+              style="color: rgb(18, 48, 71); font-weight: 700; font-style: normal; font-size: 32px;">Kesehatan keluarga,
+              ditangani dengan hati.</h1>
+            <p data-template-id="hero-description"
+              class="canva-text mt-5 max-w-xl text-lg leading-relaxed text-[#4b626c]"
+              style="color: rgb(75, 98, 108); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.5;">
+              Rumah Sakit Podomari hadir dengan layanan yang hangat, informasi yang jelas, dan perawatan yang terhubung
+              untuk setiap langkah Anda.</p>
+            <div class="mt-7 flex flex-wrap gap-3"><button data-template-id="hero-booking-button"
+                class="canva-button btn btn-primary" onclick="go('booking')"
+                style="background: rgb(8, 125, 114); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Pendaftaran
+                Online</button> <button data-template-id="hero-schedule-button" class="canva-button btn btn-outline"
+                onclick="go('jadwal')"
+                style="background: rgb(255, 255, 255); color: rgb(7, 102, 93); font-weight: 700; font-style: normal; font-size: 16px;">Jadwal
+                Dokter</button> <button data-template-id="hero-contact-button" class="canva-button btn btn-outline"
+                onclick="go('kontak')"
+                style="background: rgb(255, 255, 255); color: rgb(7, 102, 93); font-weight: 700; font-style: normal; font-size: 16px;">Hubungi
+                Kami</button>
+            </div>
+          </div>
+          <div class="relative min-h-80 overflow-hidden rounded-[2rem] shadow-xl"><img data-template-id="hero-image"
+              class="canva-image absolute inset-0 h-full w-full object-cover" loading="lazy"
+              src="https://images.pexels.com/photos/668300/pexels-photo-668300.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280"
+              alt="View of University Hospitals building in Cleveland, OH against a clear sky.">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#123047]/60 to-transparent"></div>
+            <div class="absolute bottom-5 left-5 rounded-xl bg-white/95 p-4 shadow-lg"><strong
+                class="block text-sm">Layanan yang dekat dan jelas</strong><span class="text-xs text-[#526971]">Data dan
+                informasi pada situs ini bersifat contoh.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto max-w-7xl px-4 py-12 lg:px-6">
+        <div data-template-id="igd-banner"
+          class="canva-banner flex flex-col justify-between gap-4 rounded-2xl p-6 text-white md:flex-row md:items-center"
+          style="background: rgb(18, 48, 71);">
+          <div>
+            <span class="text-sm font-bold uppercase tracking-wider text-[#c9f5eb]">Respons cepat</span>
+            <h2 data-template-id="igd-banner-title" class="canva-text mt-1 text-2xl font-bold"
+              style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">IGD siap 24 jam
+            </h2>
+            <p data-template-id="igd-banner-text" class="canva-text mt-1 text-sm text-[#d9f7f2]"
+              style="color: rgb(217, 247, 242); font-weight: 400; font-style: normal; font-size: 14px;">Untuk kondisi
+              darurat, cari bantuan segera dan hubungi nomor layanan darurat setempat.</p>
+          </div><button data-template-id="igd-banner-button" class="canva-button btn bg-white text-[#087d72]"
+            onclick="go('igd')"
+            style="background: rgb(255, 255, 255); color: rgb(8, 125, 114); font-weight: 700; font-style: normal; font-size: 16px;">Lihat
+            Layanan IGD</button>
+        </div>
+        <div class="mt-12 flex items-end justify-between gap-4">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-wider text-[#087d72]">Layanan utama</p>
+            <h2 class="display mt-1 text-3xl font-bold">Perawatan yang terhubung</h2>
+          </div><button class="text-sm font-bold text-[#087d72]" onclick="go('layanan')">Lihat semua layanan →</button>
+        </div>
+        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"><button onclick="go('rawat-jalan')"
+            class="card p-5 text-left transition hover:-translate-y-1"><i data-lucide="stethoscope"
+              class="h-7 w-7 text-[#087d72]"></i>
+            <h3 class="mt-4 font-bold">Rawat Jalan</h3>
+            <p class="mt-2 text-sm text-[#5d7078]">Konsultasi poli dan pemeriksaan terjadwal.</p>
+          </button> <button onclick="go('rawat-inap')" class="card p-5 text-left transition hover:-translate-y-1"><i
+              data-lucide="bed-double" class="h-7 w-7 text-[#087d72]"></i>
+            <h3 class="mt-4 font-bold">Rawat Inap</h3>
+            <p class="mt-2 text-sm text-[#5d7078]">Ruang perawatan dan informasi pendamping.</p>
+          </button> <button onclick="go('laboratorium')" class="card p-5 text-left transition hover:-translate-y-1"><i
+              data-lucide="flask-conical" class="h-7 w-7 text-[#087d72]"></i>
+            <h3 class="mt-4 font-bold">Penunjang Medis</h3>
+            <p class="mt-2 text-sm text-[#5d7078]">Laboratorium dan radiologi terintegrasi.</p>
+          </button> <button onclick="go('mcu')" class="card p-5 text-left transition hover:-translate-y-1"><i
+              data-lucide="heart-pulse" class="h-7 w-7 text-[#087d72]"></i>
+            <h3 class="mt-4 font-bold">Medical Check-Up</h3>
+            <p class="mt-2 text-sm text-[#5d7078]">Pemeriksaan kesehatan berkala.</p>
+          </button>
+        </div>
+      </div>
+      <div class="bg-[#eaf6f3]">
+        <div class="mx-auto grid max-w-7xl gap-8 px-4 py-12 lg:grid-cols-[1.2fr_.8fr] lg:px-6">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-wider text-[#087d72]">Berita terbaru</p>
+            <h2 class="display mt-1 text-3xl font-bold">Kabar dari Podomari</h2>
+            <div class="mt-5 grid gap-3">
+              <button onclick="go('berita')" class="card flex items-center gap-4 p-4 text-left"><span
+                  class="rounded-lg bg-[#e8f6f2] p-3 text-[#087d72]"><i data-lucide="megaphone"></i></span><span><strong
+                    class="block">Pekan Edukasi Kesehatan Keluarga</strong><small class="text-[#5d7078]">Contoh berita •
+                    02 Oktober 2026</small></span></button><button onclick="go('artikel')"
+                class="card flex items-center gap-4 p-4 text-left"><span
+                  class="rounded-lg bg-[#fff4dc] p-3 text-[#a76d00]"><i data-lucide="book-open"></i></span><span><strong
+                    class="block">Panduan singkat persiapan konsultasi</strong><small class="text-[#5d7078]">Artikel
+                    kesehatan • Edukasi umum</small></span></button>
+            </div>
+          </div>
+          <aside class="card p-6">
+            <h2 class="text-xl font-bold">Kontak cepat</h2>
+            <p class="mt-2 text-sm text-[#5d7078]">Nomor dan alamat berikut adalah data contoh.</p>
+            <div class="mt-5 space-y-4 text-sm">
+              <div class="flex gap-3">
+                <i data-lucide="phone" class="h-5 w-5 text-[#087d72]"></i><span><b>IGD 24 jam</b><br>
+                  021-555-0199 (contoh)</span>
+              </div>
+              <div class="flex gap-3">
+                <i data-lucide="map-pin" class="h-5 w-5 text-[#087d72]"></i><span>Jl. Podomari Sehat No. 25, Kota
+                  Contoh</span>
+              </div><button class="btn btn-primary w-full" onclick="go('kontak')">Informasi lokasi</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section id="tentang" class="route">
+      <div class="mx-auto max-w-7xl px-4 py-10 lg:px-6">
+        <div class="grid gap-8 lg:grid-cols-2">
+          <div>
+            <span class="tag">Tentang Kami</span>
+            <h1 class="display mt-4 text-4xl font-bold">Tumbuh bersama kepercayaan keluarga.</h1>
+            <p class="mt-5 leading-relaxed text-[#536a73]">Rumah Sakit Podomari adalah gambaran rumah sakit modern yang
+              mengutamakan komunikasi hangat, keselamatan pasien, dan akses informasi yang jelas. Semua profil dalam
+              halaman ini merupakan contoh.</p>
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+              <div class="card p-5">
+                <h2 class="font-bold">Visi</h2>
+                <p class="mt-2 text-sm text-[#5d7078]">Menjadi mitra kesehatan pilihan keluarga.</p>
+              </div>
+              <div class="card p-5">
+                <h2 class="font-bold">Misi</h2>
+                <p class="mt-2 text-sm text-[#5d7078]">Memberikan layanan aman, ramah, dan terintegrasi.</p>
+              </div>
+            </div>
+          </div><img data-template-id="about-image" class="canva-image h-80 w-full rounded-3xl object-cover shadow-lg"
+            loading="lazy"
+            src="https://images.pexels.com/photos/8459996/pexels-photo-8459996.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
+            alt="Bright and clean medical waiting room with modern seating and decor.">
+        </div>
+        <div class="mt-10 card p-6">
+          <h2 class="text-2xl font-bold">Sejarah &amp; nilai pelayanan</h2>
+          <div class="mt-5 grid gap-5 md:grid-cols-3">
+            <div>
+              <b>2012</b>
+              <p class="mt-1 text-sm text-[#5d7078]">Berawal sebagai pusat kesehatan komunitas (contoh).</p>
+            </div>
+            <div>
+              <b>2019</b>
+              <p class="mt-1 text-sm text-[#5d7078]">Pengembangan layanan spesialis dan penunjang medis.</p>
+            </div>
+            <div>
+              <b>Hari ini</b>
+              <p class="mt-1 text-sm text-[#5d7078]">Berkomitmen pada empati, ketelitian, dan kolaborasi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="manajemen" class="route">
+      <div class="mx-auto max-w-6xl px-4 py-10 lg:px-6">
+        <span class="tag">Tentang Kami</span>
+        <h1 class="display mt-4 text-4xl font-bold">Struktur organisasi</h1>
+        <p class="mt-3 text-[#5d7078]">Nama dan jabatan berikut merupakan contoh struktur kepemimpinan.</p>
+        <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <article class="card p-6">
+            <span class="tag">Direktur Utama</span>
+            <h2 class="mt-4 text-xl font-bold">dr. Maya Pradana, MARS</h2>
+            <p class="mt-2 text-sm text-[#5d7078]">Mengarahkan mutu layanan dan strategi rumah sakit.</p>
+          </article>
+          <article class="card p-6">
+            <span class="tag">Direktur Medis</span>
+            <h2 class="mt-4 text-xl font-bold">dr. Arif Santosa, Sp.PD</h2>
+            <p class="mt-2 text-sm text-[#5d7078]">Koordinasi pelayanan medis dan keselamatan pasien.</p>
+          </article>
+          <article class="card p-6">
+            <span class="tag">Direktur Operasional</span>
+            <h2 class="mt-4 text-xl font-bold">Nadia Kusuma, S.Kep., Ners</h2>
+            <p class="mt-2 text-sm text-[#5d7078]">Pengelolaan operasional dan pengalaman pasien.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="kontak" class="route">
+      <div class="mx-auto max-w-7xl px-4 py-10 lg:px-6">
+        <div class="grid gap-8 lg:grid-cols-2">
+          <div>
+            <span class="tag">Hubungi Kami / Lokasi</span>
+            <h1 class="display mt-4 text-4xl font-bold">Kami siap membantu Anda.</h1>
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+              <div class="card p-5">
+                <i data-lucide="map-pin" class="text-[#087d72]"></i>
+                <h2 class="mt-3 font-bold">Alamat contoh</h2>
+                <p class="mt-1 text-sm text-[#5d7078]">Jl. Podomari Sehat No. 25, Kota Contoh</p>
+              </div>
+              <div class="card p-5">
+                <i data-lucide="phone" class="text-[#087d72]"></i>
+                <h2 class="mt-3 font-bold">Telepon contoh</h2>
+                <p class="mt-1 text-sm text-[#5d7078]">021-555-0100<br>
+                  IGD: 021-555-0199</p>
+              </div>
+              <div class="card p-5">
+                <i data-lucide="mail" class="text-[#087d72]"></i>
+                <h2 class="mt-3 font-bold">Email contoh</h2>
+                <p class="mt-1 text-sm text-[#5d7078]">info@podomari-contoh.id</p>
+              </div>
+              <div class="card p-5">
+                <i data-lucide="clock-3" class="text-[#087d72]"></i>
+                <h2 class="mt-3 font-bold">Jam layanan</h2>
+                <p class="mt-1 text-sm text-[#5d7078]">Senin–Sabtu 07.00–20.00<br>
+                  IGD 24 jam</p>
+              </div>
+            </div>
+            <div class="map-pattern mt-6 flex h-48 items-center justify-center rounded-2xl border border-[#c9dcda]">
+              <div class="map-pin rounded-xl bg-white p-4 text-center shadow-lg">
+                <i data-lucide="map-pin" class="mx-auto text-[#d94748]"></i><b class="mt-1 block">Lokasi visual
+                  contoh</b>
+              </div>
+            </div>
+          </div>
+          <form id="contact-form" class="card p-6" onsubmit="submitContact(event)">
+            <h2 class="text-2xl font-bold">Kirim pesan</h2>
+            <p class="mt-2 text-sm text-[#5d7078]">Pesan Anda akan diteruskan ke pengelola melalui.</p>
+            <div class="mt-5 space-y-4">
+              <div>
+                <label for="contact-name" class="mb-1 block text-sm font-semibold">Nama</label><input id="contact-name"
+                  required="">
+              </div>
+              <div>
+                <label for="contact-phone" class="mb-1 block text-sm font-semibold">Nomor telepon</label><input
+                  id="contact-phone" type="tel" required="">
+              </div>
+              <div>
+                <label for="contact-email" class="mb-1 block text-sm font-semibold">Email</label><input
+                  id="contact-email" type="email" required="">
+              </div>
+              <div>
+                <label for="contact-message" class="mb-1 block text-sm font-semibold">Pesan</label><textarea
+                  id="contact-message" rows="5" required=""></textarea>
+              </div><button class="btn btn-primary w-full" type="submit">Kirim pesan <i data-lucide="send"
+                  class="h-4 w-4"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section id="layanan" class="route">
+      <div class="mx-auto max-w-7xl px-4 py-10 lg:px-6">
+        <span class="tag">Layanan Pasien</span>
+        <h1 class="display mt-4 text-4xl font-bold">Temukan layanan yang Anda butuhkan.</h1>
+        <p class="mt-3 max-w-2xl text-[#5d7078]">Pilih layanan untuk melihat informasi, persiapan, dan alur kunjungan.
+        </p>
+        <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" id="service-links"></div>
+      </div>
+    </section>
+    <section id="rawat-jalan" class="route service-page"></section>
+    <section id="rawat-inap" class="route service-page"></section>
+    <section id="igd" class="route service-page"></section>
+    <section id="laboratorium" class="route service-page"></section>
+    <section id="farmasi" class="route service-page"></section>
+    <section id="mcu" class="route service-page"></section>
+    <section id="poli-anak" class="route clinic-page"></section>
+    <section id="poli-obgyn" class="route clinic-page"></section>
+    <section id="poli-jantung" class="route clinic-page"></section>
+    <section id="poli-mata" class="route clinic-page"></section>
+    <section id="poli-gigi" class="route clinic-page"></section>
+    <section id="poli-interna" class="route clinic-page"></section>
+    <section id="poli-saraf" class="route clinic-page"></section>
+    <section id="poli-bedah" class="route clinic-page"></section>
+    <section id="jadwal" class="route">
+      <div class="mx-auto max-w-7xl px-4 py-10 lg:px-6">
+        <span class="tag">Jadwal Dokter</span>
+        <h1 class="display mt-4 text-4xl font-bold">Rencanakan kunjungan Anda.</h1>
+        <p class="mt-3 text-[#5d7078]">Jadwal berikut merupakan data contoh dan dapat berubah.</p>
+        <div class="card mt-7 grid gap-3 p-5 md:grid-cols-3">
+          <div>
+            <label for="filter-poli" class="mb-1 block text-sm font-semibold">Poli</label><select id="filter-poli"
+              onchange="renderSchedule()">
+              <option value="">Semua poli</option>
+            </select>
+          </div>
+          <div>
+            <label for="filter-hari" class="mb-1 block text-sm font-semibold">Hari</label><select id="filter-hari"
+              onchange="renderSchedule()">
+              <option value="">Semua hari</option>
+              <option>Senin</option>
+              <option>Selasa</option>
+              <option>Rabu</option>
+              <option>Kamis</option>
+              <option>Jumat</option>
+              <option>Sabtu</option>
+            </select>
+          </div>
+          <div>
+            <label for="filter-doctor" class="mb-1 block text-sm font-semibold">Nama dokter</label><input
+              id="filter-doctor" oninput="renderSchedule()" placeholder="Contoh: Andi">
+          </div>
+        </div>
+        <div id="schedule-list" class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
+        <div id="schedule-empty" class="hidden card mt-6 p-8 text-center text-[#5d7078]">
+          Tidak ada jadwal yang sesuai. Coba ubah filter Anda.
+        </div>
+      </div>
+    </section>
+    <section id="booking" class="route">
+      <div class="mx-auto max-w-4xl px-4 py-10 lg:px-6">
+        <span class="tag">Pendaftaran Online</span>
+        <h1 class="display mt-4 text-4xl font-bold">Booking kunjungan</h1>
+        <p class="mt-3 text-[#5d7078]">Isi data berikut. Pengiriman akan disimpan untuk ditinjau pengelola. Ini bukan
+          konfirmasi medis atau jaminan jadwal.</p>
+        <form id="booking-form" class="card mt-7 p-6" onsubmit="showBookingSummary(event)">
+          <div class="grid gap-4 md:grid-cols-2">
+            <div>
+              <label for="book-name" class="mb-1 block text-sm font-semibold">Nama pasien</label><input id="book-name"
+                required="">
+            </div>
+            <div>
+              <label for="book-phone" class="mb-1 block text-sm font-semibold">Nomor telepon</label><input
+                id="book-phone" type="tel" required="">
+            </div>
+            <div>
+              <label for="book-birth" class="mb-1 block text-sm font-semibold">Tanggal lahir</label><input
+                id="book-birth" type="date" required="">
+            </div>
+            <div>
+              <label for="book-poli" class="mb-1 block text-sm font-semibold">Poli</label><select id="book-poli"
+                required="" onchange="syncDoctors()"></select>
+            </div>
+            <div>
+              <label for="book-doctor" class="mb-1 block text-sm font-semibold">Dokter</label><select id="book-doctor"
+                required=""></select>
+            </div>
+            <div>
+              <label for="book-date" class="mb-1 block text-sm font-semibold">Tanggal kunjungan</label><input
+                id="book-date" type="date" required="">
+            </div>
+            <div>
+              <label for="book-time" class="mb-1 block text-sm font-semibold">Waktu pilihan</label><select
+                id="book-time" required="">
+                <option value="">Pilih waktu</option>
+                <option>08.00–10.00</option>
+                <option>10.00–12.00</option>
+                <option>13.00–15.00</option>
+                <option>15.00–17.00</option>
+              </select>
+            </div>
+            <div>
+              <label for="book-email" class="mb-1 block text-sm font-semibold">Email (opsional)</label><input
+                id="book-email" type="email">
+            </div>
+          </div>
+          <div class="mt-4">
+            <label for="book-note" class="mb-1 block text-sm font-semibold">Keluhan singkat</label><textarea
+              id="book-note" rows="4" required="" placeholder="Jelaskan singkat kebutuhan konsultasi Anda."></textarea>
+          </div><button class="btn btn-primary mt-6" type="submit">Lihat ringkasan <i data-lucide="arrow-right"
+              class="h-4 w-4"></i></button>
+        </form>
+      </div>
+    </section>
+    <section id="tarif" class="route">
+      <div class="mx-auto max-w-7xl px-4 py-10 lg:px-6">
+        <span class="tag">Informasi Biaya</span>
+        <h1 class="display mt-4 text-4xl font-bold">Tarif layanan &amp; kamar</h1>
+        <p class="mt-3 text-[#5d7078]">Seluruh tarif adalah contoh ilustratif, bukan penawaran resmi, dan dapat berubah.
+        </p>
+        <div class="card mt-6 grid gap-3 p-4 md:grid-cols-2">
+          <input id="tariff-search" placeholder="Cari layanan atau kamar..." oninput="renderTariffs()"><select
+            id="tariff-category" onchange="renderTariffs()">
+            <option value="">Semua kategori</option>
+            <option>Rawat Jalan</option>
+            <option>Rawat Inap</option>
+            <option>Penunjang</option>
+          </select>
+        </div>
+        <div class="mt-5 overflow-x-auto card">
+          <table class="w-full min-w-[560px] text-left text-sm">
+            <thead class="bg-[#eaf6f3]">
+              <tr>
+                <th class="p-4">Layanan</th>
+                <th class="p-4">Kategori</th>
+                <th class="p-4">Tarif contoh</th>
+                <th class="p-4">Keterangan</th>
+              </tr>
+            </thead>
+            <tbody id="tariff-list"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section id="asuransi" class="route">
+      <div class="mx-auto max-w-6xl px-4 py-10 lg:px-6">
+        <span class="tag">BPJS / Asuransi</span>
+        <h1 class="display mt-4 text-4xl font-bold">Cek alur pembiayaan</h1>
+        <div class="mt-6 flex gap-3">
+          <button id="bpjs-tab" class="btn btn-primary" onclick="insuranceTab('bpjs')">BPJS</button><button
+            id="private-tab" class="btn btn-outline" onclick="insuranceTab('private')">Asuransi Swasta</button>
+        </div>
+        <div id="insurance-content" class="mt-5"></div>
+        <div class="mt-6 card p-6">
+          <h2 class="text-xl font-bold">Pertanyaan umum</h2>
+          <details class="mt-4 border-t pt-4">
+            <summary class="cursor-pointer font-semibold">Apakah dokumen harus dibawa?</summary>
+            <p class="mt-2 text-sm text-[#5d7078]">Siapkan dokumen asli dan salinan sesuai kebutuhan petugas. Ketentuan
+              dapat berubah.</p>
+          </details>
+          <details class="mt-4 border-t pt-4">
+            <summary class="cursor-pointer font-semibold">Bagaimana jika masih ragu?</summary>
+            <p class="mt-2 text-sm text-[#5d7078]">Hubungi petugas informasi untuk verifikasi sebelum datang.</p>
+          </details><button class="btn btn-primary mt-5" onclick="go('kontak')">Kontak petugas</button>
+        </div>
+      </div>
+    </section>
+    <section id="artikel" class="route">
+      <div class="mx-auto max-w-7xl px-4 py-10 lg:px-6">
+        <span class="tag">Artikel Kesehatan</span>
+        <h1 class="display mt-4 text-4xl font-bold">Edukasi untuk keputusan yang lebih siap.</h1>
+        <div class="mt-6 flex flex-col gap-3 md:flex-row">
+          <input id="article-search" oninput="renderArticles()" placeholder="Cari artikel..."><select
+            id="article-category" onchange="renderArticles()" class="md:w-56">
+            <option value="">Semua kategori</option>
+            <option>Keluarga</option>
+            <option>Pencegahan</option>
+            <option>Persiapan</option>
+          </select>
+        </div>
+        <div id="article-list" class="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3"></div>
+        <article id="article-detail" class="detail-panel card mt-7 p-7"></article>
+      </div>
+    </section>
+    <section id="berita" class="route">
+      <div class="mx-auto max-w-7xl px-4 py-10 lg:px-6">
+        <span class="tag">Berita &amp; Event RS</span>
+        <h1 class="display mt-4 text-4xl font-bold">Kabar dan kegiatan Podomari.</h1>
+        <div class="mt-6 flex gap-3">
+          <select id="news-filter" onchange="renderNews()" class="max-w-xs">
+            <option value="">Semua status</option>
+            <option>Berlangsung</option>
+            <option>Akan Datang</option>
+            <option>Arsip</option>
+          </select>
+        </div>
+        <div id="news-list" class="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3"></div>
+        <article id="news-detail" class="detail-panel card mt-7 p-7"></article>
+      </div>
+    </section>
+    <section id="karir" class="route">
+      <div class="mx-auto max-w-7xl px-4 py-10 lg:px-6">
+        <span class="tag">Karir</span>
+        <h1 class="display mt-4 text-4xl font-bold">Bertumbuh bersama Podomari.</h1>
+        <p class="mt-3 text-[#5d7078]">Lowongan berikut adalah contoh dan bukan rekrutmen resmi.</p><select
+          id="career-filter" onchange="renderCareers()" class="mt-5 max-w-xs">
+          <option value="">Semua departemen</option>
+          <option>Medis</option>
+          <option>Keperawatan</option>
+          <option>Operasional</option>
+        </select>
+        <div id="career-list" class="mt-5 grid gap-4 md:grid-cols-3"></div>
+        <form id="career-form" class="card mt-8 p-6" onsubmit="submitCareer(event)">
+          <h2 class="text-2xl font-bold">Formulir lamaran sederhana</h2>
+          <p class="mt-1 text-sm text-[#5d7078]">Data akan tersimpan untuk ditinjau pengelola. Jangan kirim dokumen
+            identitas sensitif.</p>
+          <div class="mt-5 grid gap-4 md:grid-cols-2">
+            <div>
+              <label for="career-name" class="mb-1 block text-sm font-semibold">Nama lengkap</label><input
+                id="career-name" required="">
+            </div>
+            <div>
+              <label for="career-email" class="mb-1 block text-sm font-semibold">Email</label><input id="career-email"
+                type="email" required="">
+            </div>
+            <div>
+              <label for="career-phone" class="mb-1 block text-sm font-semibold">Nomor telepon</label><input
+                id="career-phone" type="tel" required="">
+            </div>
+            <div>
+              <label for="career-position" class="mb-1 block text-sm font-semibold">Posisi</label><select
+                id="career-position" required=""></select>
+            </div>
+            <div>
+              <label for="career-study" class="mb-1 block text-sm font-semibold">Pendidikan terakhir</label><input
+                id="career-study" required="">
+            </div>
+            <div>
+              <label for="career-exp" class="mb-1 block text-sm font-semibold">Pengalaman singkat</label><input
+                id="career-exp" required="">
+            </div>
+          </div><button class="btn btn-primary mt-6" type="submit">Kirim lamaran</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-10 bg-[#123047] text-[#e6f2f3]">
+    <div class="footer-grid mx-auto grid max-w-7xl grid-cols-4 gap-8 px-4 py-10 lg:px-6">
+      <div>
+        <div class="flex items-center gap-2">
+          <span
+            class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#48b7a7] font-bold text-[#123047]">+</span><b>Rumah
+            Sakit Podomari</b>
+        </div>
+        <p class="mt-4 text-sm leading-relaxed text-[#b9d0d4]">Informasi kesehatan yang lebih mudah dipahami untuk
+          pasien dan keluarga.</p>
+      </div>
+      <div>
+        <h2 class="font-bold">Kontak contoh</h2>
+        <p class="mt-3 text-sm leading-relaxed text-[#b9d0d4]">021-555-0100<br>
+          IGD: 021-555-0199<br>
+          info@podomari-contoh.id</p>
+      </div>
+      <div>
+        <h2 class="font-bold">Jam layanan</h2>
+        <p class="mt-3 text-sm leading-relaxed text-[#b9d0d4]">Senin–Sabtu: 07.00–20.00<br>
+          IGD: 24 jam<br>
+          Alamat: Kota Contoh</p>
+      </div>
+      <div>
+        <h2 class="font-bold">Tautan cepat</h2>
+        <div class="mt-3 flex flex-col items-start gap-2 text-sm text-[#b9d0d4]">
+          <button onclick="go('booking')">Pendaftaran Online</button><button onclick="go('jadwal')">Jadwal
+            Dokter</button><button onclick="go('asuransi')">BPJS / Asuransi</button><button
+            onclick="go('kontak')">Hubungi Kami</button>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/15 px-4 py-5 text-center text-xs text-[#9ebbc0]">
+      Disclaimer: Informasi ini untuk edukasi umum dan bukan pengganti konsultasi dengan tenaga kesehatan. Bila terjadi
+      keadaan darurat, segera hubungi layanan gawat darurat. Data kontak, jadwal, tarif, dan alamat adalah contoh.
+    </div>
+  </footer>
+  <div id="toast"
+    class="toast fixed bottom-5 right-5 z-50 max-w-sm rounded-xl bg-[#123047] px-5 py-4 text-sm font-semibold text-white shadow-2xl"
+    role="status"></div>
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-[#123047]/60 p-4">
+    <div class="w-full max-w-lg rounded-2xl bg-white p-6 shadow-2xl">
+      <div class="flex items-start justify-between">
+        <div>
+          <span class="tag">Periksa kembali</span>
+          <h2 class="mt-2 text-2xl font-bold">Ringkasan booking</h2>
+        </div><button class="rounded-lg p-2 hover:bg-slate-100" onclick="closeBookingModal()" aria-label="Tutup"><i
+            data-lucide="x"></i></button>
+      </div>
+      <div id="booking-summary" class="mt-5 rounded-xl bg-[#f2f8f7] p-4 text-sm"></div>
+      <div class="mt-6 flex justify-end gap-3">
+        <button class="btn btn-outline" onclick="closeBookingModal()">Ubah data</button><button id="confirm-booking"
+          class="btn btn-primary" onclick="submitBooking()">Kirim booking</button>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    const routes = {
+      beranda: "Beranda", tentang: "Tentang Kami", manajemen: "Manajemen / Struktur Organisasi", kontak: "Hubungi Kami / Lokasi", layanan: "Layanan Pasien",
+      "rawat-jalan": "Rawat Jalan", "rawat-inap": "Rawat Inap", igd: "Instalasi Gawat Darurat", laboratorium: "Laboratorium & Radiologi", farmasi: "Apotek / Farmasi", mcu: "Medical Check-Up",
+      "poli-anak": "Poli Anak", "poli-obgyn": "Poli Kandungan", "poli-jantung": "Poli Jantung", "poli-mata": "Poli Mata", "poli-gigi": "Poli Gigi", "poli-interna": "Poli Penyakit Dalam", "poli-saraf": "Poli Saraf", "poli-bedah": "Poli Bedah",
+      jadwal: "Jadwal Dokter", booking: "Pendaftaran Online", tarif: "Tarif Layanan / Kamar", asuransi: "Cek Alur BPJS / Asuransi", artikel: "Artikel Kesehatan", berita: "Berita & Event RS", karir: "Karir / Lowongan Kerja"
+    };
+    const serviceData = {
+      "rawat-jalan": { icon: "stethoscope", title: "Rawat Jalan", intro: "Konsultasi dan pemeriksaan terjadwal untuk kebutuhan kesehatan Anda.", items: ["Registrasi dan verifikasi data", "Konsultasi dokter spesialis", "Pemeriksaan penunjang sesuai indikasi"], prepare: ["Bawa identitas dan dokumen penjamin bila ada", "Datang 15–30 menit sebelum jadwal", "Siapkan daftar obat yang sedang digunakan"] },
+      "rawat-inap": { icon: "bed-double", title: "Rawat Inap", intro: "Informasi ruang perawatan, alur masuk, pulang, dan pendamping pasien.", items: ["Kamar standar, premium, dan intensif (contoh)", "Nutrisi pasien sesuai arahan tim medis", "Informasi kunjungan dan pendamping"], prepare: ["Siapkan dokumen admisi", "Petugas menjelaskan ketentuan kamar", "Pastikan barang pribadi diberi penanda"] },
+      igd: { icon: "siren", title: "Instalasi Gawat Darurat", intro: "Layanan 24 jam untuk kondisi yang membutuhkan penanganan segera.", items: ["Triase awal oleh petugas", "Tindakan stabilisasi dan observasi", "Koordinasi rujukan atau rawat inap bila diperlukan"], prepare: ["Kesulitan bernapas atau nyeri dada berat", "Penurunan kesadaran, kejang, atau cedera berat", "Perdarahan yang tidak berhenti. Hubungi layanan darurat setempat bila perlu."], danger: true },
+      laboratorium: { icon: "flask-conical", title: "Laboratorium & Radiologi", intro: "Pemeriksaan penunjang sesuai permintaan dokter dan kebutuhan layanan.", items: ["Pemeriksaan darah dan urin", "Rontgen serta pemeriksaan radiologi dasar", "Informasi hasil melalui alur layanan"], prepare: ["Ikuti instruksi puasa bila diminta", "Bawa surat pengantar pemeriksaan", "Tanyakan estimasi hasil kepada petugas"] },
+      farmasi: { icon: "pill", title: "Apotek / Farmasi", intro: "Layanan resep, informasi obat, dan panduan pengambilan obat.", items: ["Penerimaan resep", "Verifikasi dan penyiapan obat", "Edukasi aturan pakai oleh petugas"], prepare: ["Pastikan nama dan tanggal lahir benar", "Sampaikan alergi obat bila diketahui", "Gunakan obat sesuai anjuran tenaga kesehatan"] },
+      mcu: { icon: "heart-pulse", title: "Medical Check-Up", intro: "Paket pemeriksaan kesehatan berkala dengan pilihan sesuai kebutuhan.", items: ["Paket dasar, eksekutif, dan perusahaan (contoh)", "Konsultasi hasil sesuai paket", "Rekomendasi tindak lanjut bila diperlukan"], prepare: ["Puasa sesuai ketentuan paket", "Tidur cukup sebelum pemeriksaan", "Bawa daftar obat rutin bila ada"] }
+    };
+    const clinicData = {
+      "poli-anak": ["Poli Anak", "dr. Anisa Putri, Sp.A", "Senin & Rabu", "Konsultasi tumbuh kembang, imunisasi, dan keluhan umum anak.", "Ruang tunggu ramah anak dan sudut bermain."],
+      "poli-obgyn": ["Poli Kandungan (Obgyn)", "dr. Ratih Lestari, Sp.OG", "Selasa & Kamis", "Konsultasi kehamilan dan kesehatan reproduksi.", "Area konsultasi nyaman serta edukasi ibu dan keluarga."],
+      "poli-jantung": ["Poli Jantung", "dr. Bima Aditya, Sp.JP", "Senin & Jumat", "Konsultasi jantung dan pemeriksaan dasar sesuai indikasi.", "Informasi persiapan pemeriksaan disampaikan petugas."],
+      "poli-mata": ["Poli Mata", "dr. Citra Wulandari, Sp.M", "Rabu & Sabtu", "Pemeriksaan mata dan konsultasi keluhan penglihatan.", "Pemeriksaan dasar dengan alur yang jelas."],
+      "poli-gigi": ["Poli Gigi", "drg. Farhan Rizki", "Senin–Sabtu", "Perawatan gigi dan mulut serta konsultasi rutin.", "Edukasi kebersihan gigi untuk keluarga."],
+      "poli-interna": ["Poli Penyakit Dalam", "dr. Danu Prasetyo, Sp.PD", "Selasa & Jumat", "Konsultasi penyakit dalam dan evaluasi kesehatan dewasa.", "Koordinasi pemeriksaan penunjang sesuai arahan dokter."],
+      "poli-saraf": ["Poli Saraf", "dr. Eka Maharani, Sp.S", "Kamis & Sabtu", "Konsultasi keluhan saraf dan evaluasi awal.", "Pendampingan informasi alur pemeriksaan."],
+      "poli-bedah": ["Poli Bedah", "dr. Galang Putra, Sp.B", "Rabu & Jumat", "Konsultasi bedah dan informasi persiapan tindakan.", "Penjelasan tindakan berdasarkan evaluasi dokter."]
+    };
+    const doctors = [
+      { name: "dr. Anisa Putri, Sp.A", poli: "Poli Anak", hari: "Senin", jam: "08.00–12.00" },
+      { name: "dr. Ratih Lestari, Sp.OG", poli: "Poli Kandungan", hari: "Selasa", jam: "13.00–17.00" },
+      { name: "dr. Bima Aditya, Sp.JP", poli: "Poli Jantung", hari: "Senin", jam: "09.00–12.00" },
+      { name: "dr. Citra Wulandari, Sp.M", poli: "Poli Mata", hari: "Rabu", jam: "08.00–11.00" },
+      { name: "drg. Farhan Rizki", poli: "Poli Gigi", hari: "Kamis", jam: "15.00–19.00" },
+      { name: "dr. Danu Prasetyo, Sp.PD", poli: "Poli Penyakit Dalam", hari: "Jumat", jam: "08.00–12.00" },
+      { name: "dr. Eka Maharani, Sp.S", poli: "Poli Saraf", hari: "Sabtu", jam: "09.00–12.00" },
+      { name: "dr. Galang Putra, Sp.B", poli: "Poli Bedah", hari: "Rabu", jam: "13.00–16.00" }
+    ];
+    const tariffs = [["Konsultasi dokter umum", "Rawat Jalan", "Rp150.000", "Contoh"], ["Konsultasi spesialis", "Rawat Jalan", "Rp300.000", "Contoh"], ["Kamar standar per malam", "Rawat Inap", "Rp550.000", "Contoh"], ["Kamar premium per malam", "Rawat Inap", "Rp1.250.000", "Contoh"], ["Pemeriksaan darah dasar", "Penunjang", "Rp250.000", "Contoh"], ["Rontgen dasar", "Penunjang", "Rp350.000", "Contoh"]];
+    const articles = [["Persiapan sebelum konsultasi dokter", "Persiapan", "Catat keluhan, obat yang digunakan, dan pertanyaan agar konsultasi lebih terarah."], ["Mengenal pemeriksaan kesehatan berkala", "Pencegahan", "Pemeriksaan berkala dapat membantu Anda berdiskusi lebih awal mengenai kondisi kesehatan."], ["Mendampingi anak saat berobat", "Keluarga", "Berikan penjelasan sederhana, bawa benda nyaman, dan siapkan waktu tunggu."]];
+    const news = [["Pekan Edukasi Kesehatan Keluarga", "Akan Datang", "02 Oktober 2026", "Kegiatan edukasi umum bagi keluarga dengan materi gaya hidup sehat."], ["Layanan informasi pasien diperbarui", "Berlangsung", "28 September 2026", "Pembaruan alur informasi agar pasien dan keluarga lebih mudah menemukan layanan."], ["Seminar internal keselamatan pasien", "Arsip", "12 September 2026", "Kegiatan pembelajaran internal dengan simulasi komunikasi aman."]];
+    const careers = [["Perawat Pelaksana", "Keperawatan", "D3/S1 Keperawatan, STR aktif sesuai ketentuan."], ["Staf Administrasi Pasien", "Operasional", "Teliti, komunikatif, dan terbiasa menggunakan komputer."], ["Dokter Umum", "Medis", "Memiliki kualifikasi dan dokumen praktik sesuai ketentuan."]];
+
+    function go(route, push = true) { if (!routes[route]) route = "beranda"; if (push) history.pushState({ route }, "", "#" + route); document.querySelectorAll(".route").forEach(x => x.classList.remove("active")); document.getElementById(route).classList.add("active"); document.getElementById("breadcrumb").innerHTML = route === "beranda" ? "Beranda" : `<button class="font-semibold text-[#087d72]" onclick="go('beranda')">Beranda</button> <span class="mx-2">/</span> ${routes[route]}`; document.querySelectorAll(".nav-link").forEach(x => x.classList.toggle("active", x.textContent.trim() === routes[route])); window.scrollTo({ top: 0, behavior: "smooth" }); }
+    window.addEventListener("popstate", () => go(location.hash.slice(1) || "beranda", false));
+    function toggleMobile() { document.getElementById("mobile-nav").classList.toggle("hidden") }
+    function toast(text) { const t = document.getElementById("toast"); t.textContent = text; t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 4200) }
+    function renderServicePages() { Object.entries(serviceData).forEach(([id, d]) => { document.getElementById(id).innerHTML = `<div class="mx-auto max-w-7xl px-4 py-10 lg:px-6"><button class="text-sm font-bold text-[#087d72]" onclick="go('layanan')">← Semua layanan</button><div class="mt-4 grid gap-7 lg:grid-cols-[1.1fr_.9fr]"><div><span class="tag">Layanan Pasien</span><h1 class="display mt-4 text-4xl font-bold">${d.title}</h1><p class="mt-4 text-lg leading-relaxed text-[#5d7078]">${d.intro}</p>${d.danger ? `<div class="mt-6 rounded-2xl bg-[#fff0f0] p-5 text-[#8f282c]"><b>Nomor darurat contoh: 021-555-0199</b><p class="mt-1 text-sm">Untuk kondisi mengkhawatirkan, segera cari bantuan darurat terdekat.</p></div>` : ""}<button class="btn btn-primary mt-7" onclick="go('booking')">Booking / Informasi Layanan <i data-lucide="arrow-right" class="h-4 w-4"></i></button></div><div class="card p-6"><h2 class="text-xl font-bold">${d.danger ? "Kondisi yang perlu ke IGD" : "Layanan tersedia"}</h2><ul class="mt-4 space-y-3 text-sm text-[#536a73]">${d.items.map(x => `<li class="flex gap-2"><i data-lucide="check-circle-2" class="h-5 w-5 shrink-0 text-[#087d72]"></i>${x}</li>`).join("")}</ul></div></div><div class="mt-7 card p-6"><h2 class="text-xl font-bold">${d.danger ? "Alur triase & informasi" : "Persiapan pasien"}</h2><div class="mt-4 grid gap-4 md:grid-cols-3">${d.prepare.map((x, i) => `<div class="rounded-xl bg-[#f2f8f7] p-4"><b class="text-[#087d72]">0${i + 1}</b><p class="mt-2 text-sm text-[#536a73]">${x}</p></div>`).join("")}</div></div></div>` }); }
+    function renderClinics() { Object.entries(clinicData).forEach(([id, d]) => { document.getElementById(id).innerHTML = `<div class="mx-auto max-w-7xl px-4 py-10 lg:px-6"><button class="text-sm font-bold text-[#087d72]" onclick="go('layanan')">← Semua layanan</button><div class="mt-4 grid gap-7 lg:grid-cols-[1.15fr_.85fr]"><div><span class="tag">Layanan Poliklinik</span><h1 class="display mt-4 text-4xl font-bold">${d[0]}</h1><p class="mt-4 text-lg leading-relaxed text-[#5d7078]">${d[3]}</p><button class="btn btn-primary mt-7" onclick="prefillBooking('${d[0]}','${d[1]}')">Booking konsultasi <i data-lucide="calendar-plus" class="h-4 w-4"></i></button></div><aside class="card p-6"><span class="tag">Dokter contoh</span><h2 class="mt-4 text-xl font-bold">${d[1]}</h2><div class="mt-5 space-y-3 text-sm text-[#5d7078]"><p><b class="text-[#123047]">Jadwal contoh:</b> ${d[2]}</p><p><b class="text-[#123047]">Fasilitas:</b> ${d[4]}</p><p>Jadwal dapat berubah. Verifikasi melalui petugas sebelum kunjungan.</p></div></aside></div><div class="mt-7 card p-6"><h2 class="text-xl font-bold">Alur kunjungan</h2><div class="mt-4 grid gap-4 md:grid-cols-3"><div class="rounded-xl bg-[#f2f8f7] p-4"><b>01. Booking</b><p class="mt-2 text-sm text-[#5d7078]">Pilih jadwal atau hubungi petugas.</p></div><div class="rounded-xl bg-[#f2f8f7] p-4"><b>02. Registrasi</b><p class="mt-2 text-sm text-[#5d7078]">Datang lebih awal untuk verifikasi data.</p></div><div class="rounded-xl bg-[#f2f8f7] p-4"><b>03. Konsultasi</b><p class="mt-2 text-sm text-[#5d7078]">Ikuti arahan dokter dan petugas.</p></div></div></div></div>` }); }
+    function renderServices() { const all = [...Object.entries(serviceData).map(([id, d]) => [id, d.title, d.intro, d.icon]), ...Object.entries(clinicData).map(([id, d]) => [id, d[0], d[3], "stethoscope"])]; document.getElementById("service-links").innerHTML = all.map(x => `<button onclick="go('${x[0]}')" class="card p-5 text-left transition hover:-translate-y-1"><i data-lucide="${x[3]}" class="h-6 w-6 text-[#087d72]"></i><h2 class="mt-4 font-bold">${x[1]}</h2><p class="mt-2 text-sm text-[#5d7078]">${x[2]}</p><span class="mt-4 inline-block text-sm font-bold text-[#087d72]">Lihat informasi →</span></button>`).join(""); }
+    function renderSchedule() { const p = document.getElementById("filter-poli").value, h = document.getElementById("filter-hari").value, n = document.getElementById("filter-doctor").value.toLowerCase(); const rows = doctors.filter(x => (!p || x.poli === p) && (!h || x.hari === h) && x.name.toLowerCase().includes(n)); document.getElementById("schedule-list").innerHTML = rows.map(x => `<article class="card p-5"><span class="tag">${x.poli}</span><h2 class="mt-4 text-lg font-bold">${x.name}</h2><p class="mt-2 text-sm text-[#5d7078]">${x.hari} • ${x.jam}</p><button class="btn btn-outline mt-5 w-full" onclick="prefillBooking('${x.poli}','${x.name}')">Booking</button></article>`).join(""); document.getElementById("schedule-empty").classList.toggle("hidden", rows.length > 0) }
+    function renderTariffs() { const q = document.getElementById("tariff-search").value.toLowerCase(), c = document.getElementById("tariff-category").value; document.getElementById("tariff-list").innerHTML = tariffs.filter(x => (!q || x.join(" ").toLowerCase().includes(q)) && (!c || x[1] === c)).map(x => `<tr class="border-t border-[#e5eeee]"><td class="p-4 font-semibold">${x[0]}</td><td class="p-4">${x[1]}</td><td class="p-4">${x[2]}</td><td class="p-4 text-[#5d7078]">${x[3]}</td></tr>`).join("") || `<tr><td colspan="4" class="p-6 text-center text-[#5d7078]">Tidak ada tarif yang sesuai.</td></tr>` }
+    function insuranceTab(type) { document.getElementById("bpjs-tab").className = "btn " + (type === "bpjs" ? "btn-primary" : "btn-outline"); document.getElementById("private-tab").className = "btn " + (type === "private" ? "btn-primary" : "btn-outline"); const data = type === "bpjs" ? ["Dokumen contoh: kartu peserta, identitas, surat rujukan bila diperlukan.", "Verifikasi kelayakan dan dokumen di meja pendaftaran.", "Ikuti arahan petugas mengenai poli dan alur layanan."] : ["Dokumen contoh: kartu asuransi, identitas, surat jaminan bila diperlukan.", "Konfirmasi manfaat dan ketentuan penjamin kepada perusahaan asuransi.", "Petugas membantu informasi administrasi sesuai ketentuan."]; document.getElementById("insurance-content").innerHTML = `<div class="card p-6"><h2 class="text-xl font-bold">${type === "bpjs" ? "Alur BPJS" : "Alur Asuransi Swasta"}</h2><div class="mt-5 grid gap-4 md:grid-cols-3">${data.map((x, i) => `<div class="rounded-xl bg-[#f2f8f7] p-4"><span class="tag">Langkah ${i + 1}</span><p class="mt-3 text-sm text-[#536a73]">${x}</p></div>`).join("")}</div></div>` }
+    function renderArticles() { const q = document.getElementById("article-search").value.toLowerCase(), c = document.getElementById("article-category").value; document.getElementById("article-list").innerHTML = articles.filter(x => (!q || x.join(" ").toLowerCase().includes(q)) && (!c || x[1] === c)).map((x, i) => `<button onclick="openArticle(${i})" class="card overflow-hidden text-left"><div class="h-28 bg-[#dff1ed] p-5"><i data-lucide="heart-handshake" class="h-8 w-8 text-[#087d72]"></i></div><div class="p-5"><span class="tag">${x[1]}</span><h2 class="mt-3 font-bold">${x[0]}</h2><p class="mt-2 text-sm text-[#5d7078]">Baca artikel →</p></div></button>`).join("") || "<p class='text-[#5d7078]'>Artikel tidak ditemukan.</p>" }
+    function openArticle(i) { const x = articles[i], d = document.getElementById("article-detail"); d.innerHTML = `<button class="text-sm font-bold text-[#087d72]" onclick="document.getElementById('article-detail').classList.remove('open')">← Tutup detail</button><span class="tag ml-3">${x[1]}</span><h2 class="display mt-4 text-3xl font-bold">${x[0]}</h2><p class="mt-4 leading-relaxed text-[#536a73]">${x[2]} Artikel ini merupakan informasi edukasi umum dan tidak menggantikan pemeriksaan atau saran dari tenaga kesehatan.</p>`; d.classList.add("open"); d.scrollIntoView({ behavior: "smooth", block: "nearest" }) }
+    function renderNews() { const f = document.getElementById("news-filter").value; document.getElementById("news-list").innerHTML = news.filter(x => !f || x[1] === f).map((x, i) => `<button onclick="openNews(${i})" class="card p-5 text-left"><span class="tag">${x[1]}</span><p class="mt-4 text-sm text-[#5d7078]">${x[2]}</p><h2 class="mt-2 text-lg font-bold">${x[0]}</h2><p class="mt-3 text-sm font-bold text-[#087d72]">Lihat detail →</p></button>`).join("") }
+    function openNews(i) { const x = news[i], d = document.getElementById("news-detail"); d.innerHTML = `<button class="text-sm font-bold text-[#087d72]" onclick="document.getElementById('news-detail').classList.remove('open')">← Tutup detail</button><h2 class="display mt-4 text-3xl font-bold">${x[0]}</h2><p class="mt-2 text-sm text-[#5d7078]">${x[2]} • ${x[1]}</p><p class="mt-5 leading-relaxed text-[#536a73]">${x[3]} Informasi kegiatan ini adalah contoh untuk tampilan website rumah sakit.</p>`; d.classList.add("open") }
+    function renderCareers() { const f = document.getElementById("career-filter").value, rows = careers.filter(x => !f || x[1] === f); document.getElementById("career-list").innerHTML = rows.map(x => `<article class="card p-5"><span class="tag">${x[1]}</span><h2 class="mt-4 font-bold">${x[0]}</h2><p class="mt-3 text-sm text-[#5d7078]">${x[2]}</p><button class="mt-4 text-sm font-bold text-[#087d72]" onclick="document.getElementById('career-position').value='${x[0]}';document.getElementById('career-form').scrollIntoView({behavior:'smooth'})">Lamar posisi ini →</button></article>`).join("") }
+    function prefillBooking(poli, doctor) { go("booking"); setTimeout(() => { document.getElementById("book-poli").value = poli; syncDoctors(); document.getElementById("book-doctor").value = doctor }, 150) }
+    function syncDoctors() { const p = document.getElementById("book-poli").value; document.getElementById("book-doctor").innerHTML = `<option value="">Pilih dokter</option>${doctors.filter(x => !p || x.poli === p).map(x => `<option>${x.name}</option>`).join("")}` }
+    function showBookingSummary(e) { e.preventDefault(); const f = id => document.getElementById(id).value; document.getElementById("booking-summary").innerHTML = `<div class="grid grid-cols-2 gap-3"><span>Nama</span><b>${f("book-name")}</b><span>Poli</span><b>${f("book-poli")}</b><span>Dokter</span><b>${f("book-doctor")}</b><span>Jadwal</span><b>${f("book-date")} • ${f("book-time")}</b></div><p class="mt-4 text-[#5d7078]">Dengan mengirim, Anda memahami bahwa petugas akan meninjau permintaan ini terlebih dahulu.</p>`; document.getElementById("booking-modal").classList.remove("hidden"); document.getElementById("booking-modal").classList.add("flex") }
+    function closeBookingModal() { document.getElementById("booking-modal").classList.add("hidden"); document.getElementById("booking-modal").classList.remove("flex") }
+    async function saveRecord(record, control) { control.disabled = true; control.classList.add("opacity-60"); try { const result = await window.dataSdk.create(record); if (!result.isOk) { toast("Kami belum dapat mengonfirmasi pengiriman. Silakan coba lagi nanti."); return false } return true } catch (e) { toast("Pengiriman belum tersedia. Silakan coba lagi."); return false } finally { control.disabled = false; control.classList.remove("opacity-60") } }
+    async function submitBooking() { const b = document.getElementById("confirm-booking"), f = id => document.getElementById(id).value; const ok = await saveRecord({ form_type: "booking", nama_pasien: f("book-name"), no_telepon: f("book-phone"), tanggal_lahir: f("book-birth"), poli: f("book-poli"), dokter: f("book-doctor"), tanggal_kunjungan: f("book-date"), waktu: f("book-time"), keluhan: f("book-note"), email: f("book-email"), pesan: "", posisi_lamar: "", pendidikan: "", pengalaman: "", created_at: new Date().toISOString() }, b); if (ok) { closeBookingModal(); document.getElementById("booking-form").reset(); syncDoctors(); toast("Permintaan booking berhasil dikirim. Petugas akan meninjau data Anda.") } }
+    async function submitContact(e) { e.preventDefault(); const b = e.submitter, f = id => document.getElementById(id).value; const ok = await saveRecord({ form_type: "pesan_kontak", nama_pasien: f("contact-name"), no_telepon: f("contact-phone"), tanggal_lahir: "", poli: "", dokter: "", tanggal_kunjungan: "", waktu: "", keluhan: "", email: f("contact-email"), pesan: f("contact-message"), posisi_lamar: "", pendidikan: "", pengalaman: "", created_at: new Date().toISOString() }, b); if (ok) { e.target.reset(); toast("Pesan berhasil dikirim dengan aman. Terima kasih telah menghubungi kami.") } }
+    async function submitCareer(e) { e.preventDefault(); const b = e.submitter, f = id => document.getElementById(id).value; const ok = await saveRecord({ form_type: "lamaran_kerja", nama_pasien: f("career-name"), no_telepon: f("career-phone"), tanggal_lahir: "", poli: "", dokter: "", tanggal_kunjungan: "", waktu: "", keluhan: "", email: f("career-email"), pesan: "", posisi_lamar: f("career-position"), pendidikan: f("career-study"), pengalaman: f("career-exp"), created_at: new Date().toISOString() }, b); if (ok) { e.target.reset(); toast("Lamaran berhasil dikirim untuk ditinjau pengelola.") } }
+    function searchSite(q) { const box = document.getElementById("search-results"), term = q.toLowerCase().trim(); if (!term) { box.classList.add("hidden"); return } const found = Object.entries(routes).filter(([, n]) => n.toLowerCase().includes(term)).slice(0, 6); box.innerHTML = found.length ? found.map(([id, n]) => `<button class="search-result flex w-full items-center gap-2 px-4 py-3 text-left text-sm hover:bg-[#eff8f6]" onclick="go('${id}');document.getElementById('search-results').classList.add('hidden');document.getElementById('site-search').value=''"><i data-lucide="arrow-up-right" class="h-4 w-4 text-[#087d72]"></i>${n}</button>`).join("") : `<p class="px-4 py-3 text-sm text-[#5d7078]">Tidak ada halaman yang ditemukan.</p>`; box.classList.remove("hidden"); lucide.createIcons() }
+    async function initData() { try { const result = await window.dataSdk.init({ onDataChanged() { } }); if (!result.isOk) toast("Formulir tetap tersedia, tetapi penyimpanan belum dapat diaktifkan.") } catch (e) { toast("Penyimpanan formulir belum tersedia saat ini.") } }
+    document.addEventListener("DOMContentLoaded", () => { renderServicePages(); renderClinics(); renderServices(); const poli = [...new Set(doctors.map(x => x.poli))]; document.getElementById("filter-poli").innerHTML += poli.map(x => `<option>${x}</option>`).join(""); document.getElementById("book-poli").innerHTML = `<option value="">Pilih poli</option>${poli.map(x => `<option>${x}</option>`).join("")}`; document.getElementById("career-position").innerHTML = `<option value="">Pilih posisi</option>${careers.map(x => `<option>${x[0]}</option>`).join("")}`; syncDoctors(); renderSchedule(); renderTariffs(); insuranceTab("bpjs"); renderArticles(); renderNews(); renderCareers(); go(location.hash.slice(1) || "beranda", false); lucide.createIcons(); initData() });
+  </script>
+
+</body>
+
+</html>
